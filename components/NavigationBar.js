@@ -56,7 +56,7 @@ export function NavigationBar() {
 
         {/* Dropdown Menu for Mobile */}
       {isOpen && (
-        <div className="lg:hidden bg-[#15181b] p-4 text-center w-full">
+        <div className={`lg:hidden bg-[#15181b] p-4 text-center w-full transition-transform duration-400 ease-in-out ${isOpen ? 'slide-in' : 'slide-out'}`}>
           <ul className="flex flex-col space-y-2">
             {links.map((item) => (
               <li key={item.title}>
