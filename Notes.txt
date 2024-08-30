@@ -1,0 +1,7 @@
+npm commands used in this project
+
+React Next Js
+npx create-next-app@latest
+
+Tailwind CSS
+npm install Tailwind
