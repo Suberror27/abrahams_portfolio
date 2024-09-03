@@ -39,7 +39,7 @@ export function NavigationBar() {
 
     const getClassName = (value) => router.pathname === value 
     ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer" 
-    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
+    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer hover:text-gray-600";
 
     const getClassNameMobile = (value) => router.pathname === value 
     ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer text-black" 
