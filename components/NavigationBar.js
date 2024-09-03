@@ -38,17 +38,34 @@ export function NavigationBar() {
     ]
 
     const getClassName = (value) => router.pathname === value 
-    ? "border-[2px] border-black rounded-lg px-4 py-2 text-md font-semibold bg-blue-900 hover:cursor-pointer" 
-    : "border-[2px] border-black rounded-lg px-4 py-2 text-md font-semibold hover:cursor-pointer";
+    ? "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-900 hover:cursor-pointer" 
+    : "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
 
     const getClassNameMobile = (value) => router.pathname === value 
-    ? "block py-2 bg-gray-700" 
-    : "block py-2";
+    ? "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-900 hover:cursor-pointer" 
+    : "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
+
+    useEffect(() => {
+      const handleScroll = (event) => {
+        if (isOpen) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      };
+  
+      // Attach event listener
+      document.addEventListener('scroll', handleScroll, { passive: false });
+  
+      // Cleanup event listener on component unmount
+      return () => {
+        document.removeEventListener('scroll', handleScroll);
+      };
+    }, [isOpen]);
 
 return (
   <nav className="bg-gray-800 text-white p-4 relative">
     <div className="container mx-auto flex items-center justify-between">
-      <div className="text-2xl font-bold">Logo</div>
+      <Link href="/" className="text-2xl font-bold">Logo</Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-4">
@@ -76,11 +93,11 @@ return (
     </div>
 
     {/* Mobile Menu */}
-    <div ref={menuRef} className={`md:hidden fixed top-[4rem] right-0 w-full bg-gray-800 text-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div ref={menuRef} className={`md:hidden fixed top-[4rem] right-0 w-2/5 h-full bg-gray-800 bg-opacity-50 text-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       <div className="flex flex-col h-full">
-        <ul className="flex flex-col flex-grow py-4">
+        <ul className="flex flex-col py-2 gap-2">
         {links.map((item) => (
-          <li className="w-full text-center">
+          <li className="self-center">
             <Link href={item.value} className={getClassNameMobile(item.value)} onClick={() => setIsOpen(false)}>
               {item.title}
             </Link>
