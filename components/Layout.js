@@ -15,23 +15,23 @@ export default function Layout({ children }) {
       <main className="h-[100vh] max-w-[100vw]">
         <NavigationBar />
         <div className="overflow-hidden h-[80vh] relative">
-          <div className="absolute top-0 bg-primary-500 min-h-[10rem] md:min-h-[18rem] min-w-[100%] max-w-[100%] -z-10">
-            <div class="absolute top-[10rem] md:top-[18rem] h-[190px] w-[6000px] bg-wave animate-wave-1 bg-bottom"></div>
-            <div class="absolute top-[11.5rem] md:top-[19rem] left-0 h-[190px] w-[6000px] bg-wave animate-wave-2 bg-bottom opacity-50"></div>
+          <div className="absolute top-0 bg-primary-500 min-h-[10rem] md:min-h-[18rem] min-w-[100%] max-w-[100%]">
+            <div className="absolute top-[10rem] md:top-[18rem] h-[190px] w-[6000px] bg-wave animate-wave-1 bg-bottom"></div>
+            <div className="absolute top-[11.5rem] md:top-[19rem] left-0 h-[190px] w-[6000px] bg-wave animate-wave-2 bg-bottom opacity-50"></div>
           </div>
           <div className="absolute bg-bottom bottom-0 min-w-[100vw] max-w-[100vw]" style={{minHeight: "43rem"}}>
           </div>
-          <div className="absolute top-0 no-scroll min-h-screen min-w-[100vw] max-w-[100vw] z-20">
+          <div className="absolute top-0 no-scroll min-h-screen">
             {children}
           </div>
         </div>
-          {/* <div class="overflow-hidden pb-5">
-            <div class="relative">
-              <div class="bg-[#028ac7]">
+          {/* <div className="overflow-hidden pb-5">
+            <div className="relative">
+              <div className="bg-[#028ac7]">
                 {children}
               </div>
-              <div class="left-0 top-0 h-[16rem] w-[900px] animate-wave-1 bg-wave bg-bottom"></div>
-              <div class="absolute bottom-0 left-0 h-[18rem] w-[1000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
+              <div className="left-0 top-0 h-[16rem] w-[900px] animate-wave-1 bg-wave bg-bottom"></div>
+              <div className="absolute bottom-0 left-0 h-[18rem] w-[1000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
             </div>
           </div> */}
         {/* <div className="flex flex-col bg-[#15181b] min-h-screen bg-wave animate-wave-1 top-0 h-1/2 -z-10"></div> */}
@@ -41,26 +41,26 @@ export default function Layout({ children }) {
 }
 
 // <section id="intro">
-//   <div class="overflow-hidden pb-5">
-//     <div class="relative">
-//       <div class="bg-primary-500">
-//         <div class="container mx-auto grid grid-cols-2 justify-items-center gap-y-20 px-2 py-20 sm:px-4">
-//           <div class="col-span-2 w-[255px] lg:col-span-1">
-//             <h1 class="text-6xl font-bold leading-tight drop-shadow-xl">Lucas <br>Facu</h1>
-//             <span class="text-xl font-light uppercase leading-10" data-testid="react-typed">
+//   <div className="overflow-hidden pb-5">
+//     <div className="relative">
+//       <div className="bg-primary-500">
+//         <div className="container mx-auto grid grid-cols-2 justify-items-center gap-y-20 px-2 py-20 sm:px-4">
+//           <div className="col-span-2 w-[255px] lg:col-span-1">
+//             <h1 className="text-6xl font-bold leading-tight drop-shadow-xl">Lucas <br>Facu</h1>
+//             <span className="text-xl font-light uppercase leading-10" data-testid="react-typed">
 //               <span>front-end developer</span>
-//               <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+//               <span className="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
 //             </span>
 //           </div>
-//           <div class="col-span-2 animate-move-y lg:col-span-1">
-//             <figure class="h-56">
-//               <img src="img/hero.svg" alt="" class="h-full">
+//           <div className="col-span-2 animate-move-y lg:col-span-1">
+//             <figure className="h-56">
+//               <img src="img/hero.svg" alt="" className="h-full">
 //             </figure>
 //           </div>
 //         </div>
 //       </div>
-//       <div class="left-0 h-[150px] w-[6000px] animate-wave-1 bg-wave bg-bottom"></div>
-//       <div class="absolute bottom-0 left-0 h-[150px] w-[6000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
+//       <div className="left-0 h-[150px] w-[6000px] animate-wave-1 bg-wave bg-bottom"></div>
+//       <div className="absolute bottom-0 left-0 h-[150px] w-[6000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
 //     </div>
 //   </div>
 // </section> 

@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 
 export function NavigationBar() {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsOpen(prev => !prev);
+    setOpenMenu(prev => !prev);
   };
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export function NavigationBar() {
         menuRef.current && !menuRef.current.contains(event.target) &&
         buttonRef.current && !buttonRef.current.contains(event.target)
       ) {
-        setIsOpen(false);
+        setOpenMenu(false);
       }
     };
 
@@ -38,49 +38,26 @@ export function NavigationBar() {
     ]
 
     const getClassName = (value) => router.pathname === value 
-    ? "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-900 hover:cursor-pointer" 
-    : "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
+    ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer" 
+    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
 
     const getClassNameMobile = (value) => router.pathname === value 
-    ? "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-900 hover:cursor-pointer" 
-    : "flex border-[2px] border-black rounded-lg justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
-
-    useEffect(() => {
-      const handleScroll = (event) => {
-        if (isOpen) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-      };
-  
-      // Attach event listener
-      document.addEventListener('scroll', handleScroll, { passive: false });
-  
-      // Cleanup event listener on component unmount
-      return () => {
-        document.removeEventListener('scroll', handleScroll);
-      };
-    }, [isOpen]);
+    ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer text-black" 
+    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
 
 return (
-  <nav className="bg-gray-800 text-white p-4 relative">
+  <nav className="bg-primary-500 text-white p-4 relative z-10">
     <div className="container mx-auto flex items-center justify-between">
-      <Link href="/" className="text-2xl font-bold">Logo</Link>
+      <Link href="/" className="text-2xl font-bold drop-shadow-md">Abraham</Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-4">
         {links.map((item) => (
-            <Link href={item.value} className={getClassName(item.value)}>
-              {item.title}
-            </Link>
+          <Link key={item.title} href={item.value} className={getClassName(item.value)}>
+            {item.title}
+          </Link>
         ))}
       </div>
-      {/* <div className="hidden md:flex space-x-4">
-        <Link href="/" legacyBehavior><a className="hover:bg-gray-700 p-2 rounded">Home</a></Link>
-        <Link href="#" legacyBehavior><a className="hover:bg-gray-700 p-2 rounded">Menu</a></Link>
-        <Link href="#" legacyBehavior><a className="hover:bg-gray-700 p-2 rounded">About</a></Link>
-        <Link href="#" legacyBehavior><a className="hover:bg-gray-700 p-2 rounded">Awards</a></Link>
-      </div> */}
 
       {/* Hamburger Button */}
       <div className="md:hidden flex items-center">
@@ -93,31 +70,16 @@ return (
     </div>
 
     {/* Mobile Menu */}
-    <div ref={menuRef} className={`md:hidden fixed top-[4rem] right-0 w-2/5 h-full bg-gray-800 bg-opacity-50 text-white transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-      <div className="flex flex-col h-full">
-        <ul className="flex flex-col py-2 gap-2">
+    <div ref={menuRef} className={`md:hidden fixed top-0 left-0 w-2/5 h-[100vh] bg-black bg-opacity-75 text-white transition-transform duration-300 ease-in-out ${openMenu ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
+      <div className="flex flex-col justify-center h-full">
+        <ul className="flex flex-col gap-2">
         {links.map((item) => (
-          <li className="self-center">
-            <Link href={item.value} className={getClassNameMobile(item.value)} onClick={() => setIsOpen(false)}>
+          <li key={item.value} className="self-center">
+            <Link href={item.value} className={getClassNameMobile(item.value)} onClick={() => setOpenMenu(false)}>
               {item.title}
             </Link>
           </li>
         ))}
-          {/* <li className="w-full text-center">
-            <Link href="/" legacyBehavior><a className="block py-2 hover:bg-gray-700" onClick={() => setIsOpen(false)}>Home</a></Link>
-          </li>
-          <li className="w-full text-center">
-            <Link href="#" legacyBehavior><a className="block py-2 hover:bg-gray-700" onClick={() => setIsOpen(false)}>Menu</a></Link>
-          </li>
-          <li className="w-full text-center">
-            <Link href="#" legacyBehavior><a className="block py-2 hover:bg-gray-700" onClick={() => setIsOpen(false)}>About</a></Link>
-          </li>
-          <li className="w-full text-center">
-            <Link href="#" legacyBehavior><a className="block py-2 hover:bg-gray-700" onClick={() => setIsOpen(false)}>Awards</a></Link>
-          </li>
-          <li className="w-full text-center">
-            <a href="tel:410-602-5008" className="block py-2 hover:bg-gray-700" onClick={() => setIsOpen(false)}>410-602-5008</a>
-          </li> */}
         </ul>
       </div>
     </div>
