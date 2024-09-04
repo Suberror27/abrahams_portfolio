@@ -31,7 +31,7 @@ export function NavigationBar() {
 
     const links = [
         {value: "/", title: "Home"},
-        {value: "/about", title: "About"},
+        {value: "/about", title: "About Me"},
         {value: "/contact", title: "Contact"},
         {value: "/page3", title: "Page 3"},
         {value: "/page4", title: "Page 4"}
@@ -46,7 +46,7 @@ export function NavigationBar() {
     : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
 
 return (
-  <nav className="bg-primary-500 text-white p-4 relative z-10">
+  <nav className="bg-primary-500 text-white p-4 z-10 sticky top-0">
     <div className="container mx-auto flex items-center justify-between">
       <Link href="/" className="text-2xl font-bold drop-shadow-md">Abraham</Link>
 
@@ -70,7 +70,7 @@ return (
     </div>
 
     {/* Mobile Menu */}
-    <div ref={menuRef} className={`md:hidden fixed top-0 left-0 w-2/5 h-[100vh] bg-black bg-opacity-75 text-white transition-transform duration-300 ease-in-out ${openMenu ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
+    <div ref={menuRef} className={`md:hidden fixed top-0 left-0 w-2/5 h-[100vh] bg-black bg-opacity-75 text-white transition-transform duration-300 ease-in-out z-10 ${openMenu ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
       <div className="flex flex-col justify-center h-full">
         <ul className="flex flex-col gap-2">
         {links.map((item) => (
