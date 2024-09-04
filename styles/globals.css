@@ -4,14 +4,14 @@
 
 /* Define the keyframes for sliding and fading in/out */
 @keyframes slideIn {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideOut {
@@ -67,9 +67,9 @@
     transform: translateY(-25px);
   }
   50% {
-      -webkit-transform: translateY(10px);
-      -moz-transform: translateY(10px);
-      transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
 
