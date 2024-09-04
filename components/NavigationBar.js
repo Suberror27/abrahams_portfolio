@@ -30,20 +30,21 @@ export function NavigationBar() {
   }, []);
 
     const links = [
-        {value: "/", title: "Home"},
-        {value: "/about", title: "About Me"},
-        {value: "/contact", title: "Contact"},
-        {value: "/page3", title: "Page 3"},
-        {value: "/page4", title: "Page 4"}
+      {value: "/", title: "Home"},
+      {value: "/education", title: "My Education"},
+      {value: "/skills", title: "My Skills"},
+      {value: "/contact", title: "Contact"},
+      {value: "/page4", title: "Page 4"},
+      {value: "/about", title: "About Me"},
     ]
 
     const getClassName = (value) => router.pathname === value 
-    ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer" 
-    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer hover:text-gray-600";
+    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer" 
+    : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer hover:text-gray-600";
 
     const getClassNameMobile = (value) => router.pathname === value 
-    ? "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer text-black" 
-    : "flex rounded-3xl justify-center w-[5.5rem] py-2 text-md font-semibold hover:cursor-pointer";
+    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer text-black" 
+    : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer";
 
 return (
   <nav className="bg-primary-500 text-white p-4 z-10 sticky top-0">

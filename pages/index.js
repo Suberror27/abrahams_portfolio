@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { SideButtons } from "../components/SideButtons";
+import { ContactButtons } from "../components/ContactButtons";
 
 export default function Home() {
   return (
@@ -32,45 +32,16 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="grid grid-rows-1 pt-4 pb-4">
+      <div className="grid grid-rows-1 pt-4 pb-5">
         <div className="grid grid-cols-1">
           <div className="flex justify-center">
-            <SideButtons />
+            <ContactButtons />
           </div>
-          <div className="text-center md:hidden">Want to know more about me? <Link href="/about" className="underline text-blue-500">Click Here</Link></div>
+          {/* <div className="text-center md:hidden">
+            <Link href="/Education" className="underline text-blue-500">My Education</Link>
+          </div> */}
         </div>
       </div>
    </>
   );
 }
-
-
-{/* <div class="hidden md:block fixed top-40 left-0 ">
-  <div class="flex flex-row md:flex-col gap-6 my-4">
-    <div>
-      <a href="https://github.com/Sajomkhan" target="blank">
-        <img class="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/assets/github-539df0ef.svg" alt="Icon Image" />
-      </a>
-    </div>
-    <div>
-      <a href="https://www.linkedin.com/in/saiful-ajom-khan" target="blank">
-        <img class="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/assets/linkedin-971d829a.svg" alt="Icon Image" />
-      </a>
-    </div>
-    <div>
-      <a href="https://twitter.com/SabuzKh10364527" target="blank">
-        <img class="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/assets/twitter-a91de54d.svg" alt="Icon Image" />
-      </a>
-    </div>
-    <div>
-      <a href="https://drive.google.com/file/d/1in4bElBWRcDCfHinaO7FnOtqDH5t38oE/view?usp=sharing" target="blank">
-        <img class="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/assets/cv-3d528e84.svg" alt="Icon Image" />
-      </a>
-    </div>
-    <div>
-      <a class="hover:cursor-pointer">
-        <img class="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/assets/mail-cebebce6.svg" alt="Icon Image" />
-      </a>
-    </div>
-  </div>
-</div> */}

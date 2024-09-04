@@ -1,5 +1,5 @@
 
-export function SideButtons(){
+export function ContactButtons(){
 
     return <>
         {/* <div class="hidden md:block fixed top-40 left-2"> */}
