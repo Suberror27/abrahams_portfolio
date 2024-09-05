@@ -1,36 +1,79 @@
 // import SkillBars from "@/components/SkillsBar";
+import Container from "@/components/Container";
+import Badges from "@/components/Badges";
+import Certificates from "@/components/Certificates";
 
 export default function Education() {
 
+  const education = [
+    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
+    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
+    // Add more education
+  ];
+
+  const workExperience = [
+    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
+    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
+    // Add more education
+  ];
+
+  const certInfo = [
+    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
+    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
+    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
+    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
+    // Add more certifications
+  ];
+
+  const badges = [
+    { title: 'Tester', image: '/expo_icon.svg', issuer: 'Expo' },
+    { title: 'Tester 2', image: '/html_icon.svg', issuer: 'HMTL' },
+    { title: 'Tester', image: '/expo_icon.svg', issuer: 'Expo' },
+    { title: 'Tester 2', image: '/html_icon.svg', issuer: 'HMTL' },
+    // Add more badges
+  ];
+
     return (
      <>
-      <h1 className="text-white text-2xl md:text-4xl text-center pb-4">Education and Expreriances</h1>
-      {/* <SkillBars /> */}
-      {/* <div class="col-md-6 col-12 ">
-  <div class=" col-block education ">
-    <h3 class="about-subtitle">Education</h3>
-    <div class="resume-item">
-      <span class="item-arrow"></span>
-      <h5 class="item-title">Bachelor of Science in Information Technology</h5>
-      <span class="item-details">Cambridge University / 2004 - 2007</span>
-      <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
-    </div>
-    <div class="resume-item">
-      <span class="item-arrow"></span>
-      <h5 class="item-title">Master of Science in Information Technology</h5>
-      <span class="item-details">Cambridge University / 2007 - 2009</span>
-      <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
-    </div>
-    <div class="resume-item">
-      <span class="item-arrow"></span>
-      <h5 class="item-title">Diploma In Web Design</h5>
-      <span class="item-details">Cambridge University / 2009 - 2010</span>
-      <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
-    </div>
-  </div>
-</div> */}
+      <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">My Education and Expreriences</h1>
 
-        {/* <div class="flex flex-col items-center">
+      <div className="grid grid-rows-1">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+
+          <div>
+            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center">Education</h1>
+            <Container information={education} />
+          </div>
+
+          <div>
+            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center">Work Experience</h1>
+            <Container information={workExperience} />
+          </div>
+          
+        </div>
+      </div>
+
+      <div className="grid grid-rows-1 pt-4 pb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+
+          <div>
+            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center">Certificates</h1>
+            <Certificates certInfo={certInfo}/>
+          </div>
+
+          <div>
+            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center">Badges</h1>
+            <Badges badgeInfo={badges} />
+          </div>
+
+        </div>
+      </div>
+     </>
+    );
+  }
+  
+  
+ {/* <div class="flex flex-col items-center">
           <div class="primary_bg2 py-2 px-5 rounded-md hover:scale-105 duration-500">Education</div>
           <div class="w-px h-[30px] bg-gray-500/50 "></div>
           <div class="rounded-full p-4 primary_bg2 hover:scale-105 duration-500">
@@ -79,7 +122,7 @@ export default function Education() {
           </div>
 
           <div class="w-full flex flex-wrap justify-around gap-x-16 gap-y-10 xl:mt-16 px-4">
-            <div class="z-20 flex flex-col gap-2 max-w-[430px] text-sm section_color shadow-lg p-4 rounded-lg xl:mt-[60px] hover:scale-105 duration-500">
+            <div class="flex flex-col gap-2 max-w-[430px] text-sm section_color shadow-lg p-4 rounded-lg xl:mt-[60px] hover:scale-105 duration-500">
               <p class="lg:text-lg font-bold primary_text">Aspiring Professional with Notable Project Experience</p>
               <p class=" font-bold">Personal Project Endeavors<span class="font-light text-[12px]"> | Oct 2020 - till now</span></p>
               <div class="mt-2 font-semibold ">My Skills:</div>
@@ -117,7 +160,7 @@ export default function Education() {
               </div>
             </div>
             
-            <div class="z-20 flex flex-col gap-2 max-w-[430px] text-sm section_color shadow-lg p-4 rounded-lg xl:mt-[60px] hover:scale-105 duration-500">
+            <div class="flex flex-col gap-2 max-w-[430px] text-sm section_color shadow-lg p-4 rounded-lg xl:mt-[60px] hover:scale-105 duration-500">
               <p class="lg:text-lg font-bold primary_text">Engineer (Electrical &amp; Automation)</p>
               <p class=" font-bold">Bashundhara Group, Bangladesh<span class="font-light text-[12px]"> | Nov 2010 - Sep 2020</span></p>
               <div class="mt-2 font-semibold ">My Skills:</div>
@@ -148,9 +191,3 @@ export default function Education() {
             </div>
           </div>
         </div> */}
-     
-     </>
-    );
-  }
-  
-  

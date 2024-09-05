@@ -23,11 +23,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="">
+          <div>
             <div className="flex h-[25rem] md:h-[35rem] justify-center">
                 <img className="rounded-2xl h-full w-auto object-fill" src="/profile_picture.png"/>
             </div>
-            
           </div>
 
         </div>
