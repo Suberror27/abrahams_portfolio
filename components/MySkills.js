@@ -1,19 +1,19 @@
 
 export function MySkills() {
     const skillsList = [
-        {imgSource: "/react_icon.svg", title: "React.js", startTime: new Date("2024-05-01")},
-        {imgSource: "/react_icon.svg", title: "React Native", startTime: new Date("2024-08-01")},
-        {imgSource: "/nextjs_icon.svg", title: "Next.js", startTime: new Date("2024-05-01")},
-        {imgSource: "/expo_icon.svg", title: "Expo", startTime: new Date("2024-08-01")},
-        // {imgSource: "/nodejs_icon.svg", title: "Node.js", startTime: new Date("2024-01-01")},
-        {imgSource: "/mongodb_icon.svg", title: "MongoDB", startTime: new Date("2024-05-01")},
-        {imgSource: "/oracle-icon.svg", title: "OracleDB", startTime: new Date("2024-05-01")},
-        {imgSource: "/github_icon.svg", title: "GitHub", startTime: new Date("2024-05-01")},
-        {imgSource: "/tailwindcss_icon.svg", title: "Tailwind", startTime: new Date("2024-08-01")},
-        {imgSource: "/bootstrap_icon.svg", title: "Bootstrap", startTime: new Date("2024-04-01")},
-        {imgSource: "/html_icon.svg", title: "HTML", startTime: new Date("2023-09-01")},
-        {imgSource: "/css_icon.svg", title: "CSS", startTime: new Date("2023-09-01")},
-        {imgSource: "/javascript_icon.svg", title: "JavaScript", startTime: new Date("2024-04-01")},
+        {imgSource: "/react_icon.svg", title: "React.js", startTime: new Date("2024-06")},
+        {imgSource: "/react_icon.svg", title: "React Native", startTime: new Date("2024-08")},
+        {imgSource: "/nextjs_icon.svg", title: "Next.js", startTime: new Date("2024-06")},
+        {imgSource: "/expo_icon.svg", title: "Expo", startTime: new Date("2024-08")},
+        {imgSource: "/nodejs_icon.svg", title: "Node.js", startTime: new Date("2024-06")},
+        {imgSource: "/mongodb_icon.svg", title: "MongoDB", startTime: new Date("2024-06")},
+        {imgSource: "/oracle-icon.svg", title: "OracleDB", startTime: new Date("2024-06")},
+        {imgSource: "/github_icon.svg", title: "GitHub", startTime: new Date("2024-09")},
+        {imgSource: "/tailwindcss_icon.svg", title: "Tailwind", startTime: new Date("2024-08")},
+        {imgSource: "/bootstrap_icon.svg", title: "Bootstrap", startTime: new Date("2024-04")},
+        {imgSource: "/html_icon.svg", title: "HTML", startTime: new Date("2023-09")},
+        {imgSource: "/css_icon.svg", title: "CSS", startTime: new Date("2023-09")},
+        {imgSource: "/javascript_icon.svg", title: "JavaScript", startTime: new Date("2024-04")},
       ]
 
     // Function to calculate months of experience from a start date
@@ -28,10 +28,20 @@ export function MySkills() {
 
     const calculateMonthsFromDate = (startDate) => {
         const now = new Date();
-        let months = (now.getFullYear() - startDate.getFullYear()) * 12;
-        months -= startDate.getMonth();
-        months += now.getMonth();
-        return months <= 0 ? 0 : months;
+        const startYear = startDate.getFullYear();
+        const startMonth = startDate.getMonth();
+        const nowYear = now.getFullYear();
+        const nowMonth = now.getMonth();
+        
+        // Calculate total months difference
+        let months = (nowYear - startYear) * 12 + (nowMonth - startMonth);
+    
+        // Adjust for partial month
+        if (now.getDate() < startDate.getDate()) {
+            months--;
+        }
+    
+        return months < 0 ? 0 : months;
     };
 
     // Calculate experience for each skill

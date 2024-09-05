@@ -76,3 +76,43 @@
 .bg-wave {
   background-image: url(/wave.svg);
 }
+
+.static-progress-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.static-progress-title {
+  width: 150px; /* Adjust width as needed */
+  text-align: left;
+  font-weight: bold;
+}
+
+.static-progress-container {
+  flex: 1;
+  position: relative;
+  background-color: #a19c9c;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.static-progress-bar {
+  height: 100%;
+  background-color: #235cc6;
+  position: relative;
+  transition: width 1s ease-out; /* Smooth transition for width changes */
+}
+
+.static-progress-label {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+

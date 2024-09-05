@@ -1,0 +1,69 @@
+/* components/SkillBars.module.css */
+
+.skillBars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each skill bar */
+    padding: 20px; /* Padding around the container */
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the info and the progress line */
+    position: relative; /* Position relative for floating tag positioning */
+}
+
+.info {
+    flex: 1; /* Allows the info section to take up available space */
+    min-width: 100px; /* Minimum width for the info section */
+}
+
+.progressWrapper {
+    flex: 3; /* Allows the progress line to take up more space */
+    position: relative; /* Position relative for floating tag positioning */
+    width: 100%; /* Ensure it takes the full width available */
+}
+
+.progressLine {
+    background-color: #e0e0e0; /* Light gray background for the progress line */
+    height: 20px; /* Height of the progress line */
+    border-radius: 10px; /* Rounded corners for the progress line */
+    overflow: hidden; /* Hide anything that overflows */
+    position: relative; /* Position relative for the floating tag positioning */
+}
+
+.progressFill {
+    display: block;
+    height: 100%; /* Fill the entire height of the progress line */
+    transition: width 0.5s ease; /* Smooth transition effect */
+}
+
+.floatingTag {
+    position: absolute; /* Position absolutely relative to the progress line */
+    top: -35px; /* Position above the progress line */
+    transform: translateX(-50%); /* Center the tag horizontally */
+    width: max-content; /* Fit the width of the content */
+    text-align: center; /* Center the text */
+    font-weight: bold;
+    color: #333; /* Dark gray text color */
+    background-color: #fff; /* White background for the tag */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for the tag */
+    padding: 2px 5px; /* Padding inside the tag */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    z-index: 1; /* Ensure it appears above the progress bar */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.tagTail {
+    position: absolute; /* Position absolutely relative to the tag */
+    top: 100%; /* Place it directly below the tag */
+    left: 50%; /* Center horizontally relative to the tag */
+    transform: translateX(-50%); /* Center the tail horizontally */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Creates the left side of the triangle */
+    border-right: 5px solid transparent; /* Creates the right side of the triangle */
+    border-top: 5px solid #fff; /* Color of the tail, same as the tag background */
+}
