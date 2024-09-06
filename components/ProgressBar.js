@@ -9,7 +9,7 @@ export default function ProgressBar({ title, progress }){
 
   return (
     <div className="static-progress-wrapper hover:scale-105 duration-500">
-      <div className="static-progress-title">{title}</div>
+      <div className="static-progress-title text-white">{title}</div>
       <div className="static-progress-container ">
         <div className="static-progress-bar" style={{ width: `${animatedProgress}%` }}>
           <div className="static-progress-label">{progress}%</div>

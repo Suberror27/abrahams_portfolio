@@ -77,6 +77,11 @@
   background-image: url(/wave.svg);
 }
 
+.bg-wave-bottom {
+  background-image: url(/wave.svg);
+  rotate: 180deg;
+}
+
 .static-progress-wrapper {
   display: flex;
   align-items: center;

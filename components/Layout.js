@@ -12,16 +12,20 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-full w-full">
+      <main className="h-full w-full bg-gray-700">
         <NavigationBar />
-        <div className="overflow-hidden h-[100%] relative">
+        <div className="overflow-hidden h-[100%] relative z-10">
           <div className="absolute top-0 bg-primary-500 min-h-[16rem] md:min-h-[18rem] min-w-[100%] max-w-[100%] -z-10">
             <div className="absolute top-[16rem] md:top-[18rem] h-[190px] w-[6000px] bg-wave animate-wave-1 bg-bottom"></div>
             <div className="absolute top-[17.5rem] md:top-[19rem] left-0 h-[190px] w-[6000px] bg-wave animate-wave-2 bg-bottom opacity-50"></div>
           </div>
+          <div className="absolute bottom-0 bg-primary-500 min-h-[1rem] md:min-h-[1rem] min-w-[100%] max-w-[100%] -z-10">
+            <div className="absolute top-[-10rem] rotate-180 md:top-[-10rem] h-[190px] w-[5500px] bg-wave animate-wave-1 bg-bottom"></div>
+            <div className="absolute top-[-11.5rem] md:top-[-11rem] left-0 h-[190px] w-[5500px] bg-wave-bottom animate-wave-2 bg-bottom opacity-50"></div>
+          </div>
           {/* <div className="absolute bg-bottom bottom-0 min-w-[100vw] max-w-[100vw]" style={{minHeight: "43rem"}}>
           </div> */}
-          <div className="w-full md:w-[65vw] md:m-auto min-h-[90vh]">
+          <div className="w-full md:w-[65vw] md:m-auto min-h-[90vh] md:min-h-[100vh]">
             {children}
           </div>
         </div>

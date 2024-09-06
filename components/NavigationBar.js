@@ -39,17 +39,17 @@ export function NavigationBar() {
     ]
 
     const getClassName = (value) => router.pathname === value 
-    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer" 
-    : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer hover:text-gray-600";
+    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-gray-700 hover:cursor-pointer" 
+    : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer text-gray-700 hover:text-white";
 
     const getClassNameMobile = (value) => router.pathname === value 
-    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-blue-600 hover:cursor-pointer text-black" 
+    ? "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold bg-gray-700 hover:cursor-pointer" 
     : "flex rounded-3xl justify-center w-[7rem] py-2 text-md font-semibold hover:cursor-pointer";
 
 return (
-  <nav className="bg-primary-500 text-white p-4 z-10 sticky top-0">
+  <nav className="bg-primary-500 text-white p-4 z-20 sticky top-0">
     <div className="container mx-auto flex items-center justify-between">
-      <Link href="/" className="text-2xl font-bold drop-shadow-md">Abraham</Link>
+      <Link href="/" className="text-2xl font-bold drop-shadow-md">{router.pathname !== "/" ? "Back Home" : "Abraham"}</Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-4">
@@ -71,7 +71,7 @@ return (
     </div>
 
     {/* Mobile Menu */}
-    <div ref={menuRef} className={`md:hidden fixed top-0 left-0 w-2/5 h-[100vh] bg-black bg-opacity-75 text-white transition-transform duration-300 ease-in-out z-10 ${openMenu ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
+    <div ref={menuRef} className={`md:hidden fixed top-0 left-0 w-2/5 h-[100vh] bg-black bg-opacity-85 text-white transition-transform duration-300 ease-in-out z-10 ${openMenu ? 'translate-x-0' : 'translate-x-[-100%]'}`}>
       <div className="flex flex-col justify-center h-full">
         <ul className="flex flex-col gap-2">
         {links.map((item) => (
