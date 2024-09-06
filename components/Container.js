@@ -7,9 +7,9 @@ export default function Container({ information }){
         <div className="space-y-2">
           {information.map((exp, index) => (
             <div key={index} className="bg-slate-300 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-700">{exp.title}</h3>
-              <p className="text-gray-500">{exp.company} | {exp.date}</p>
-              <p className="mt-2 text-gray-600">{exp.description}</p>
+              <h3 className="text-sm md:text-xl font-semibold text-gray-700">{exp.title}</h3>
+              <p className="text-gray-500 text-xs md:text-lg">{exp.company} | {exp.date}</p>
+              <p className="text-gray-600 text-xs md:text-lg">{exp.description}</p>
             </div>
           ))}
         </div>

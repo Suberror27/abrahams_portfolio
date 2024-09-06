@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
+import { ContactButtons } from './ContactButtons';
 
 export function NavigationBar() {
   const router = useRouter();
@@ -31,11 +32,12 @@ export function NavigationBar() {
 
     const links = [
       {value: "/", title: "Home"},
-      {value: "/education", title: "My Education"},
-      {value: "/skills", title: "My Skills"},
-      {value: "/contact", title: "Contact"},
-      {value: "/page4", title: "Page 4"},
       {value: "/about", title: "About Me"},
+      {value: "/projects", title: "Projects"},
+      {value: "/education", title: "Education"},
+      {value: "/skills", title: "Skills"},
+      {value: "/contact", title: "Contact"},
+      
     ]
 
     const getClassName = (value) => router.pathname === value 
@@ -83,6 +85,7 @@ return (
         ))}
         </ul>
       </div>
+      <ContactButtons />
     </div>
   </nav>
 );

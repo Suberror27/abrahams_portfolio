@@ -51,14 +51,14 @@ export function MySkills() {
     }));
 
     return <>
-        <div className="flex flex-row flex-wrap justify-center items-center gap-3 lg:gap-8">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 lg:gap-5">
             {skillsWithExperience.map((item) => (
                 <div key={item.title} className="flex flex-col justify-center items-center gap-1 hover:scale-110 duration-500">
                     <div title={item.title} className="h-24 w-24 p-3 md:h-28 md:w-28 rounded-full flex items-center justify-center">
                         <img className="w-full h-full p-2 object-fill rounded-md bg-gray-100 shadow-lg" src={item.imgSource} alt={item.imgSource} width="300" height="300" />
                     </div>
-                    <p className="text-sm md:text-base font-bold">{item.title}</p>
-                    <p className="text-xs md:text-base"><span>{item.experienceMonths}</span> months of Exp.</p>
+                    <p className="text-sm md:text-lg font-semibold text-white drop-shadow-lg">{item.title}</p>
+                    <p className="text-xs md:text-base text-black"><span>{item.experienceMonths}</span> months of Exp.</p>
                 </div>
             ))}
         </div>

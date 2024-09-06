@@ -6,47 +6,45 @@ import Certificates from "@/components/Certificates";
 export default function Education() {
 
   const education = [
-    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
-    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
+    { title: "GED", company: "NWACC", date: "???? - ????", description: "GED 4.2 GPA" },
+    { title: "Computer Technician", company: "CONALEP", date: "2014 - 2017", description: "High School Diploma in Computer Technician" },
     // Add more education
   ];
 
   const workExperience = [
-    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
-    { title: 'Software Engineer', company: 'Tech Corp', date: '2020 - Present', description: 'Developed amazing features for our flagship product.' },
-    // Add more education
+    { title: "Software Engineer", company: "Tech Corp", date: "2020 - Present", description: "Developed amazing features for our flagship product." },
+    { title: "Software Engineer", company: "Tech Corp", date: "2020 - Present", description: "Developed amazing features for our flagship product." },
+    // Add more workExperience
   ];
 
   const certInfo = [
-    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
-    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
-    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
-    { title: 'Certified React Developer', issuer: 'React Academy', date: '2022' },
+    { title: "IBM Full-Stack JavaScript Developer Profesional Certificate", issuer: "IBM / Coursera", date: "Present", image: "/expo_icon.svg" },
+    { title: "HTML, CSS, and Javascript for Web Developers Specialization", issuer: "John Hopkins University", date: "04-2024", image: "/Coursera 8PCJJNTAPXYJ.svg" },
     // Add more certifications
   ];
 
   const badges = [
-    { title: 'Tester', image: '/expo_icon.svg', issuer: 'Expo' },
-    { title: 'Tester 2', image: '/html_icon.svg', issuer: 'HMTL' },
-    { title: 'Tester', image: '/expo_icon.svg', issuer: 'Expo' },
-    { title: 'Tester 2', image: '/html_icon.svg', issuer: 'HMTL' },
+    { title: "Tester", image: "/expo_icon.svg", issuer: "Expo" },
+    { title: "Tester 2", image: "/html_icon.svg", issuer: "HMTL" },
+    { title: "Tester", image: "/expo_icon.svg", issuer: "Expo" },
+    { title: "Tester 2", image: "/html_icon.svg", issuer: "HMTL" },
     // Add more badges
   ];
 
     return (
      <>
-      <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">My Education and Expreriences</h1>
+      <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">My Education and Work Exprerience</h1>
 
       <div className="grid grid-rows-1">
         <div className="grid grid-cols-1 md:grid-cols-2">
 
           <div>
-            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center pb-2">Education</h1>
+            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Education</h1>
             <Container information={education} />
           </div>
 
           <div>
-            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center pb-2">Work Experience</h1>
+            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Work Experience</h1>
             <Container information={workExperience} />
           </div>
           
@@ -57,12 +55,12 @@ export default function Education() {
         <div className="grid grid-cols-1 md:grid-cols-2">
 
           <div>
-            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center pb-2">Certificates</h1>
+            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Certificates</h1>
             <Certificates certInfo={certInfo}/>
           </div>
 
           <div>
-            <h1 className="font-semibold text-gray-700 text-2xl md:text-4xl text-center pb-2">Badges</h1>
+            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Badges</h1>
             <Badges badgeInfo={badges} />
           </div>
 
