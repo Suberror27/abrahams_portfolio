@@ -32,7 +32,7 @@ export function NavigationBar() {
 
     const links = [
       {value: "/", title: "Home"},
-      {value: "/about", title: "About Me"},
+      // {value: "/about", title: "About Me"},
       {value: "/projects", title: "Projects"},
       {value: "/education", title: "Education"},
       {value: "/skills", title: "Skills"},

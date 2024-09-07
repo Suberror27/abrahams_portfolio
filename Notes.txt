@@ -5,3 +5,6 @@ npx create-next-app@latest
 
 Tailwind CSS
 npm install Tailwind
+
+MongoDB
+npm instal mongodb

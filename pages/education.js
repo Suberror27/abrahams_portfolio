@@ -6,28 +6,26 @@ import Certificates from "@/components/Certificates";
 export default function Education() {
 
   const education = [
-    { title: "GED", company: "NWACC", date: "???? - ????", description: "GED 4.2 GPA" },
+    { title: "GED", company: "NWACC", date: "01/2023 - 03/2023", description: "3.2 GPA" },
     { title: "Computer Technician", company: "CONALEP", date: "2014 - 2017", description: "High School Diploma in Computer Technician" },
     // Add more education
   ];
 
   const workExperience = [
-    { title: "Software Engineer", company: "Tech Corp", date: "2020 - Present", description: "Developed amazing features for our flagship product." },
-    { title: "Software Engineer", company: "Tech Corp", date: "2020 - Present", description: "Developed amazing features for our flagship product." },
+    { title: "Systems Administrator", company: "Walmart", date: "05-2024 - Present", description: "Systems Administrator at Walmart Print Solutions 8600" },
+    { title: "Systems Operator", company: "Walmart", date: "02-2022 - 05-2024", description: "Systems Operator at Walmart DC 6094" },
     // Add more workExperience
   ];
 
   const certInfo = [
-    { title: "IBM Full-Stack JavaScript Developer Profesional Certificate", issuer: "IBM / Coursera", date: "Present", image: "/expo_icon.svg" },
+    { title: "IBM Full-Stack JavaScript Developer Profesional Certificate", issuer: "IBM / Coursera", date: "Working on it...", image: "/cert_placeholder.svg" },
     { title: "HTML, CSS, and Javascript for Web Developers Specialization", issuer: "John Hopkins University", date: "04-2024", image: "/Coursera 8PCJJNTAPXYJ.svg" },
     // Add more certifications
   ];
 
   const badges = [
-    { title: "Tester", image: "/expo_icon.svg", issuer: "Expo" },
-    { title: "Tester 2", image: "/html_icon.svg", issuer: "HMTL" },
-    { title: "Tester", image: "/expo_icon.svg", issuer: "Expo" },
-    { title: "Tester 2", image: "/html_icon.svg", issuer: "HMTL" },
+    { title: "Azure Fundamentals", image: "/azure_fundamentals_badge.svg", issuer: "Microsoft" },
+    { title: "Azure Developing Solutions", image: "/azure_solutions_badge.svg", issuer: "Microsoft" },
     // Add more badges
   ];
 
