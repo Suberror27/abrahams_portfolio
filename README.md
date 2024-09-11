@@ -27,6 +27,10 @@ npm install Tailwind
 
 #MongoDB
 npm instal mongodb
+
+#Vercel Analytics
+npm i @vercel/analytics
+
 ```
 
 ## Feel free to send me your feedback

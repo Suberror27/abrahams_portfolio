@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import { NavigationBar } from './NavigationBar';
 import { ContactButtons } from './ContactButtons';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Layout({ children }) {
   return (
@@ -31,6 +32,7 @@ export default function Layout({ children }) {
           </div> */}
           <div className="w-full md:w-[70vw] md:m-auto min-h-[92vh] md:min-h-[100vh]">
             {children}
+            <Analytics />
           </div>
         </div>
           {/* <div className="overflow-hidden pb-5">
