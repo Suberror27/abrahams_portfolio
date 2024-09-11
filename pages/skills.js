@@ -6,7 +6,7 @@ export default function Skills() {
      <>
      <div className="fade-in">
 
-        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">My Skills</h1>
+        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">Skills</h1>
         <div className="grid grid-rows-1">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="pb-5">
@@ -14,7 +14,7 @@ export default function Skills() {
               <MySkills />
             </div>
             <div className="pb-8 w-full p-4">
-              <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">Skill Level</h1>
+              <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">My Skill Levels</h1>
               <ProgressBar title= "React.js" progress={80} />
               <ProgressBar title= "React Native" progress={50} />
               <ProgressBar title= "Next.js" progress={80} />

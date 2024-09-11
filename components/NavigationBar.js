@@ -36,7 +36,7 @@ export function NavigationBar() {
       {value: "/projects", title: "Projects"},
       {value: "/education", title: "Education"},
       {value: "/skills", title: "Skills"},
-      {value: "/contact", title: "Contact"},
+      // {value: "/contact", title: "Contact"},
       
     ]
 

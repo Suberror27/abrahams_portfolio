@@ -6,7 +6,7 @@ import Certificates from "@/components/Certificates";
 export default function Education() {
 
   const education = [
-    { title: "GED", company: "NWACC", date: "01/2023 - 03/2023", description: "3.2 GPA" },
+    { title: "GED", company: "NWACC", date: "03/2023", description: "3.2 GPA" },
     { title: "Computer Technician", company: "CONALEP", date: "2014 - 2017", description: "High School Diploma in Computer Technician" },
     // Add more education
   ];
@@ -19,7 +19,7 @@ export default function Education() {
 
   const certInfo = [
     { title: "IBM Full-Stack JavaScript Developer Profesional Certificate", issuer: "IBM / Coursera", date: "Working on it...", image: "/cert_placeholder.svg" },
-    { title: "HTML, CSS, and Javascript for Web Developers Specialization", issuer: "John Hopkins University", date: "04-2024", image: "/Coursera 8PCJJNTAPXYJ.svg" },
+    { title: "HTML, CSS, and Javascript for Web Developers Specialization", issuer: "John Hopkins University / Coursera", date: "04-2024", image: "/Coursera 8PCJJNTAPXYJ.svg" },
     // Add more certifications
   ];
 
@@ -33,34 +33,34 @@ export default function Education() {
      <>
      <div className="fade-in">
 
-        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">My Education and Work Exprerience</h1>
+        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-8">Education and Work Exprerience</h1>
 
         <div className="grid grid-rows-1">
           <div className="grid grid-cols-1 md:grid-cols-2">
 
-            <div>
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Education</h1>
+            <div className="pt-4 pb-2">
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Education</h1>
               <Container information={education} />
             </div>
 
-            <div>
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Work Experience</h1>
+            <div className="pt-4 pb-2">
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Work Experience</h1>
               <Container information={workExperience} />
             </div>
             
           </div>
         </div>
 
-        <div className="grid grid-rows-1 pt-4 pb-5">
+        <div className="grid grid-rows-1">
           <div className="grid grid-cols-1 md:grid-cols-2">
 
-            <div>
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Certificates</h1>
+            <div className="pt-4 pb-2">
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Certificates</h1>
               <Certificates certInfo={certInfo}/>
             </div>
 
-            <div>
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Badges</h1>
+            <div className="pt-4 pb-2">
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Badges</h1>
               <Badges badgeInfo={badges} />
             </div>
 

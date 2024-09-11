@@ -10,16 +10,16 @@ export default function Home() {
 
           <div className="text-center p-4">
             <p className="text-3xl md:text-6xl md:text-center drop-shadow-lg font-semibold text-gray-700 pb-2">Abraham Camargo</p>
-            <p className="text-white text-md md:text-3xl pt-1 font-semibold drop-shadow-lg">Systems Administrator / Web Developer</p>
-            <div className="text-md md:text-2xl p-4 rounded-3xl md:m-4 md:h-[27rem] text-white font-semibold text-start shadow-lg bg-gray-600">
+            <p className="text-white text-md md:text-3xl pt-1 font-semibold drop-shadow-lg">Systems Administrator / Web Software Developer</p>
+            <div className="text-md md:text-2xl p-4 rounded-3xl md:m-4 md:h-[25rem] text-white font-semibold text-start shadow-lg bg-gray-600 overflow-y-auto">
               <p className="mb-2">
-                • Enthusiastic web developer specializing in React and Next.js, with a passion for designing and building dynamic web applications that excel in user experience and performance.
+                • Enthusiastic web developer specializing in React and Next.js, with a passion for building dynamic web applications that excel in user experience and performance.
               </p>
               <p className="mb-2">
-                • Skilled in both front-end and backend development, with a keen attention to detail and a commitment to delivering high-quality, innovative solutions.
+                • Skilled in both front-end and backend development, with a keen attention to detail and a commitment to delivering high-quality products.
               </p>
               <p>
-                • Highly self-motivated and ready to showcase my expertise in creating seamless and effective digital experiences.
+                • Highly self-motivated and ready to showcase my experience in creating seamless and effective digital experiences.
               </p>
             </div>
           </div>
