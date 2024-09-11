@@ -22,7 +22,7 @@ export default function Skills() {
               <ProgressBar title= "Node.js" progress={60} />
               <ProgressBar title= "MongoDB"  progress={60} />
               <ProgressBar title= "OracleDB"  progress={80} />
-              <ProgressBar title= "GitHub"  progress={50} />
+              <ProgressBar title= "GitHub"  progress={30} />
               <ProgressBar title= "Tailwind"  progress={75} />
               <ProgressBar title= "Bootstrap"  progress={90} />
               <ProgressBar title= "HTML"  progress={90} />
