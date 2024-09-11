@@ -31,39 +31,42 @@ export default function Education() {
 
     return (
      <>
-      <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">My Education and Work Exprerience</h1>
+     <div className="fade-in">
 
-      <div className="grid grid-rows-1">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">My Education and Work Exprerience</h1>
 
-          <div>
-            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Education</h1>
-            <Container information={education} />
+        <div className="grid grid-rows-1">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+
+            <div>
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Education</h1>
+              <Container information={education} />
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Work Experience</h1>
+              <Container information={workExperience} />
+            </div>
+            
           </div>
-
-          <div>
-            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Work Experience</h1>
-            <Container information={workExperience} />
-          </div>
-          
         </div>
-      </div>
 
-      <div className="grid grid-rows-1 pt-4 pb-5">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-rows-1 pt-4 pb-5">
+          <div className="grid grid-cols-1 md:grid-cols-2">
 
-          <div>
-            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Certificates</h1>
-            <Certificates certInfo={certInfo}/>
+            <div>
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Certificates</h1>
+              <Certificates certInfo={certInfo}/>
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Badges</h1>
+              <Badges badgeInfo={badges} />
+            </div>
+
           </div>
-
-          <div>
-            <h1 className="font-semibold text-white text-2xl md:text-4xl text-center pb-2">Badges</h1>
-            <Badges badgeInfo={badges} />
-          </div>
-
         </div>
-      </div>
+    </div>
      </>
     );
   }

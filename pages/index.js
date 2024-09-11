@@ -5,7 +5,7 @@ import { ContactButtons } from "../components/ContactButtons";
 export default function Home() {
   return (
    <>
-      <div className="grid grid-rows-1 pt-4 pb-4">
+      <div className="grid grid-rows-1 pt-4 pb-4 fade-in">
         <div className="grid grid-cols-1 md:grid-cols-2">
 
           <div className="text-center p-4">
