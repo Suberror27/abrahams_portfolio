@@ -1,7 +1,3 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { ContactButtons } from "../components/ContactButtons";
-
 export default function Home() {
   return (
    <>

@@ -19,11 +19,6 @@ export function ContactButtons(){
                         <img className="h-8 w-9 md:h-12 md:w-12 p-[1px] md:p-0.5 bg-white rounded-lg shadow-xl hover:bg-blue-200 hover:scale-110 duration-300" src="/resume_icon.svg" alt="Icon Image" />
                     </a>
                 </div>
-                {/* <div>
-                    <a className="hover:cursor-pointer">
-                        <img className="h-8 w-8 md:h-10 md:w-10 p-[1px] md:p-0.5 bg-gray-200 rounded-md shadow-md hover:bg-teal-300 hover:scale-110 duration-300" src="/email_icon.svg" alt="Icon Image" />
-                    </a>
-                </div> */}
             </div>
         </div>
     </>

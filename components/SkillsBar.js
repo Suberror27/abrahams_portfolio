@@ -1,5 +1,3 @@
-// components/SkillBars.js
-
 import { useEffect, useRef, useState } from 'react';
 import styles from './SkillBars.module.css'; // Import the CSS Module
 

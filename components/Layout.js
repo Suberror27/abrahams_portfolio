@@ -1,4 +1,3 @@
-// pages/components/Layout.js
 import Head from 'next/head';
 import React from 'react';
 import { NavigationBar } from './NavigationBar';
@@ -28,49 +27,12 @@ export default function Layout({ children }) {
             <div className="absolute top-[-8rem] rotate-180 md:top-[-8rem] h-[140px] w-[5500px] bg-wave animate-wave-1 bg-bottom"></div>
             <div className="absolute top-[-8.5rem] md:top-[-8.5rem] left-0 h-[140px] w-[5500px] bg-wave-bottom animate-wave-2 bg-bottom opacity-50"></div>
           </div>
-          {/* <div className="absolute bg-bottom bottom-0 min-w-[100vw] max-w-[100vw]" style={{minHeight: "43rem"}}>
-          </div> */}
           <div className="w-full md:w-[70vw] md:m-auto min-h-[92vh] md:min-h-[100vh]">
             {children}
             <Analytics />
           </div>
         </div>
-          {/* <div className="overflow-hidden pb-5">
-            <div className="relative">
-              <div className="bg-[#028ac7]">
-                {children}
-              </div>
-              <div className="left-0 top-0 h-[16rem] w-[900px] animate-wave-1 bg-wave bg-bottom"></div>
-              <div className="absolute bottom-0 left-0 h-[18rem] w-[1000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
-            </div>
-          </div> */}
-        {/* <div className="flex flex-col bg-[#15181b] min-h-screen bg-wave animate-wave-1 top-0 h-1/2 -z-10"></div> */}
       </main>
     </>
   );
 }
-
-// <section id="intro">
-//   <div className="overflow-hidden pb-5">
-//     <div className="relative">
-//       <div className="bg-primary-500">
-//         <div className="container mx-auto grid grid-cols-2 justify-items-center gap-y-20 px-2 py-20 sm:px-4">
-//           <div className="col-span-2 w-[255px] lg:col-span-1">
-//             <h1 className="text-6xl font-bold leading-tight drop-shadow-xl">Lucas <br>Facu</h1>
-//             <span className="text-xl font-light uppercase leading-10" data-testid="react-typed">
-//               <span>front-end developer</span>
-//               <span className="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
-//             </span>
-//           </div>
-//           <div className="col-span-2 animate-move-y lg:col-span-1">
-//             <figure className="h-56">
-//               <img src="img/hero.svg" alt="" className="h-full">
-//             </figure>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="left-0 h-[150px] w-[6000px] animate-wave-1 bg-wave bg-bottom"></div>
-//       <div className="absolute bottom-0 left-0 h-[150px] w-[6000px] animate-wave-2 bg-wave bg-bottom opacity-50"></div>
-//     </div>
-//   </div>
-// </section> 
