@@ -11,7 +11,7 @@ export default function Education() {
   ];
 
   const workExperience = [
-    { title: "Systems Administrator", company: "Walmart", date: "05-2024 - Present", description: "Systems Administrator at Walmart Print Solutions 8600" },
+    { title: "Data Systems Administrator", company: "Walmart", date: "05-2024 - Present", description: "Systems Administrator at Walmart Print Solutions 8600" },
     { title: "Systems Operator", company: "Walmart", date: "02-2022 - 05-2024", description: "Systems Operator at Walmart DC 6094" },
     // Add more workExperience
   ];
