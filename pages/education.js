@@ -48,7 +48,7 @@ export default function Education() {
         <div className="grid grid-rows-1">
           <div className="grid grid-cols-1 md:grid-cols-1 md:justify-items-center">
 
-            <div className="pt-4 pb-2 md:w-1/2">
+            <div className="pt-4 pb-8 md:w-1/2">
               <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">School</h1>
               <Container information={education} />
             </div>

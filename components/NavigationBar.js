@@ -33,10 +33,10 @@ export function NavigationBar() {
     const links = [
       {value: "/", title: "Home"},
       // {value: "/about", title: "About Me"},
+      {value: "/skills", title: "Skills"},
       {value: "/projects", title: "Projects"},
       {value: "/workExperience", title: "Work Exp."},
       {value: "/education", title: "Education"},
-      {value: "/skills", title: "Skills"},
       // {value: "/contact", title: "Contact"},
       
     ]

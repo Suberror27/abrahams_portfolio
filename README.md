@@ -26,7 +26,7 @@ npx create-next-app@latest
 npm install Tailwind
 
 #MongoDB
-npm instal mongodb
+npm install mongodb
 
 #Vercel Analytics
 npm i @vercel/analytics
