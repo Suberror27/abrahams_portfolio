@@ -10,12 +10,6 @@ export default function Education() {
     // Add more education
   ];
 
-  const workExperience = [
-    { title: "Data Systems Administrator", company: "Walmart", date: "05-2024 - Present", description: "Systems Administrator at Walmart Print Solutions 8600" },
-    { title: "Systems Operator", company: "Walmart", date: "02-2022 - 05-2024", description: "Systems Operator at Walmart DC 6094" },
-    // Add more workExperience
-  ];
-
   const certInfo = [
     { title: "IBM Full-Stack JavaScript Developer Profesional Certificate", issuer: "IBM / Coursera", date: "Working on it...", image: "/cert_placeholder.svg" },
     { title: "HTML, CSS, and Javascript for Web Developers Specialization", issuer: "John Hopkins University / Coursera", date: "04-2024", image: "/Coursera 8PCJJNTAPXYJ.svg" },
@@ -23,6 +17,7 @@ export default function Education() {
   ];
 
   const badges = [
+    { title: "Building Apps using React", image: "/build_apps_using_react.svg", issuer: "Walmart Global Tech" },
     { title: "Azure Fundamentals", image: "/azure_fundamentals_badge.svg", issuer: "Microsoft" },
     { title: "Azure Developing Solutions", image: "/azure_solutions_badge.svg", issuer: "Microsoft" },
     // Add more badges
@@ -32,23 +27,7 @@ export default function Education() {
      <>
      <div className="fade-in">
 
-        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-8">Education and Work Exprerience</h1>
-
-        <div className="grid grid-rows-1">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-
-            <div className="pt-4 pb-2">
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Education</h1>
-              <Container information={education} />
-            </div>
-
-            <div className="pt-4 pb-2">
-              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">Work Experience</h1>
-              <Container information={workExperience} />
-            </div>
-            
-          </div>
-        </div>
+        <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-8">Education</h1>
 
         <div className="grid grid-rows-1">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -65,6 +44,19 @@ export default function Education() {
 
           </div>
         </div>
+
+        <div className="grid grid-rows-1">
+          <div className="grid grid-cols-1 md:grid-cols-1 md:justify-items-center">
+
+            <div className="pt-4 pb-2 md:w-1/2">
+              <h1 className="font-semibold text-white text-2xl md:text-4xl text-center">School</h1>
+              <Container information={education} />
+            </div>
+
+          </div>
+        </div>
+
+        
     </div>
      </>
     );

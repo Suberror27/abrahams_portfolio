@@ -34,6 +34,7 @@ export function NavigationBar() {
       {value: "/", title: "Home"},
       // {value: "/about", title: "About Me"},
       {value: "/projects", title: "Projects"},
+      {value: "/workExperience", title: "Work Exp."},
       {value: "/education", title: "Education"},
       {value: "/skills", title: "Skills"},
       // {value: "/contact", title: "Contact"},
