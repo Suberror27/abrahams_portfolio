@@ -8,12 +8,12 @@ export default function Skills() {
 
         <h1 className="text-gray-700 font-semibold text-2xl md:text-5xl text-center pb-10">Skills</h1>
         <div className="grid grid-rows-1">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="pb-5">
+          <div className="grid grid-cols-1 md:grid-cols-1 justify-items-center">
+            <div className="pb-5 md:w-2/3">
             <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">My Tech Stacks</h1>
               <MySkills />
             </div>
-            <div className="pb-8 w-full p-4">
+            {/* <div className="pb-8 w-full p-4">
               <h1 className="text-white font-semibold text-2xl md:text-4xl text-center pb-4">My Skills Level</h1>
               <ProgressBar title= "React.js" progress={80} />
               <ProgressBar title= "React Native" progress={50} />
@@ -28,7 +28,7 @@ export default function Skills() {
               <ProgressBar title= "HTML"  progress={90} />
               <ProgressBar title= "CSS"  progress={90} />
               <ProgressBar title= "JavaScript"  progress={75} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

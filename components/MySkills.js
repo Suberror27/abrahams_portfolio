@@ -58,7 +58,7 @@ export function MySkills() {
                         <img className="w-full h-full p-2 object-fill rounded-md bg-gray-100 shadow-lg" src={item.imgSource} alt={item.imgSource} width="300" height="300" />
                     </div>
                     <p className="text-sm md:text-lg font-semibold text-white drop-shadow-lg">{item.title}</p>
-                    <p className="text-xs md:text-base text-black"><span>{item.experienceMonths}</span> months of Exp.</p>
+                    {/* <p className="text-xs md:text-base text-black"><span>{item.experienceMonths}</span> months of Exp.</p> */}
                 </div>
             ))}
         </div>
