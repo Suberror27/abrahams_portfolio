@@ -33,4 +33,4 @@ npm i @vercel/analytics
 
 ```
 
-## Feel free to send me your feedback.
+## Feel free to send me your feedback..
